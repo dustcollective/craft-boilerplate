@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('default', '', [
-
+		// do nothing.
 	]);
 
 	grunt.registerTask('styles', 'Do your styles.', [
