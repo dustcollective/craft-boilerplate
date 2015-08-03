@@ -1,0 +1,66 @@
+/*
+*	Helpers
+*	Mainly %placeholders here
+*
+*	ToC:
+*		clearfix
+*		Text overflow
+*		List reset
+*		Visibility hidden
+*/
+
+/*
+ *	Clearfix
+ */
+
+%clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+/*
+ *	Text overflow
+ *	An easy way to truncate text with an ellipsis. Requires the element to be block or inline-block.
+ *	/via http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+ */
+
+%text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+/*
+ *	List reset
+ *	The common task of zeroing out a list
+ */
+
+%list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+ *	Visibility hidden
+ *	Accessiblity-friendlier way to hide text from h5b
+ */
+.visuallyhidden,
+%visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

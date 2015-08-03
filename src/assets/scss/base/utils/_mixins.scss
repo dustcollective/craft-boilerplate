@@ -1,0 +1,28 @@
+/*
+ *	Mixins
+ */
+
+/*
+ *	font-size
+ *  Produces rem font sizes from px.
+ *  http://guyroutledge.co.uk/blog/simplify-font-size-with-rems/
+ */
+
+@mixin font-size( $font-size ) {
+	font-size: $font-size * 1px;
+	font-size: $font-size / 16 * 1rem;
+}
+
+/*
+ *	Hover color-picker
+ *	Asseses the darkness of a color & decides if the hover should be lighter or darker
+ */
+@function hover-picker( $color ) {
+
+	@if lightness($color) > 60 {
+		@return darken($color, 20);
+	} @else {
+		@return lighten($color, 20);
+	}
+
+}
