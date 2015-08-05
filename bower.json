@@ -1,8 +1,9 @@
 {
-  "name": "craft-boilerplate",
+  "name": "snapsheffield",
   "version": "0.1.0",
   "authors": [
-    "Michael Westwood <michael@du.st>"
+    "Michael Westwood <michael@du.st>",
+    "Alex Jenkinson <alex@du.st>"
   ],
   "private": true,
   "ignore": [
