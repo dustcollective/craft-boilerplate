@@ -1,9 +1,9 @@
 {
-  "name": "snapsheffield",
+  "name": "craft-boilerplate",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dustcollective/snapsheffield"
+    "url": "git://github.com/dustcollective/craft-boilerplate"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
