@@ -12,6 +12,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "normalize-scss": "~3.0.3"
+    "normalize-scss": "~3.0.3",
+    "tota11y": "~0.0.10"
   }
 }

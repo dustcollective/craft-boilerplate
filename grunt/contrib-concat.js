@@ -10,6 +10,13 @@ module.exports = function(grunt) {
 			],
 			dest: '<%= dirs.dest %><%= dirs.js_build_folder %>main.js'
 		},
+		dev: {
+			src: [
+				'bower_components/tota11y/build/tota11y.js',
+				'<%= dirs.src %>js/main.js'
+			],
+			dest: '<%= dirs.dest %><%= dirs.js_build_folder %>main.js'
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');

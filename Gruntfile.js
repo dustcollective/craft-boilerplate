@@ -37,6 +37,12 @@ module.exports = function(grunt) {
 		'imagemin:all'
 	]);
 
+	grunt.registerTask('dev', 'Rebuild everything.', [
+		'sass:dev',
+		'concat:dev',
+		'images'
+	]);
+
 	grunt.registerTask('build', 'Rebuild everything.', [
 		'styles',
 		'scripts',
