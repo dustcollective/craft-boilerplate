@@ -1,3 +1,42 @@
 /*
  *	Variables
  */
+
+ // structure
+ $width-gutter: 20px;
+ $width-col: 45px;
+ $width-page: 1060px;
+ $magic-number: 50px;
+
+ // breakpoints
+ $breakpoint-bear: 1060px;
+ $breakpoint-fox: 800px;
+ $breakpoint-rabbit: 600px;
+ $breakpoint-mouse: 480px;
+
+ // susy configs
+ $susy: (
+	columns: 16,
+	gutters: $width-gutter/$width-col,
+	gutter-position: inside,
+	global-box-sizing: border-box
+);
+
+$susy-fox: (
+    columns: 8
+);
+
+$susy-rabbit: (
+    columns: 4,
+    gutters: ($width-gutter/$width-col)/2
+);
+
+$susy-mouse: (
+    columns: 1
+);
+
+// fonts
+
+// colours
+
+// colours in context
