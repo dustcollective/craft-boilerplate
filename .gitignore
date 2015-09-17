@@ -7,6 +7,11 @@ craft/*
 # ...the custom admin logo...
 !craft/storage/logo/
 
+# ...non-sensitive configuration...
+!craft/config/
+craft/config/db.php
+craft/config/license.key
+
 # ...and your templates...
 !/craft/templates/
 
