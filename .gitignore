@@ -5,11 +5,13 @@ craft/*
 !craft/plugins/
 
 # ...the custom admin logo...
-!craft/storage
 !craft/storage/logo/
 
-# ... and your templates.
+# ...and your templates...
 !/craft/templates/
+
+# ...except templates generated from src.
+/craft/templates/_partials/favicons.html
 
 # Now ignore everything in public...
 public/*
@@ -17,7 +19,7 @@ public/*
 # ...except assets...
 !public/assets/
 
-# ...but ignore CSS, JS and images, as these will be generated from src.
+# ...but do things generated from src.
 public/assets/css/
 public/assets/js/
 public/assets/img/

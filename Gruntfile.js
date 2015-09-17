@@ -47,7 +47,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', 'Rebuild everything.', [
 		'styles',
 		'scripts',
-		'images'
+		'images',
+		'favicons'
 	]);
 
 };
