@@ -34,6 +34,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('images', 'Do your images.', [
+		'clean',
 		'imagemin:all'
 	]);
 
