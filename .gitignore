@@ -4,6 +4,9 @@ craft/*
 # except plugins...
 !craft/plugins/
 
+# ...translations...
+!craft/translations/
+
 # ...the custom admin logo...
 !craft/storage/logo/
 
