@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('scripts', 'Do your scripts.', [
-		'concat',
+		'concat:dist',
 		'uglify'
 	]);
 
