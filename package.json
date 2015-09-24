@@ -15,5 +15,8 @@
     "grunt-newer": "^1.1.1",
     "grunt-sass": "^1.0.0",
     "imagemin-mozjpeg": "^5.1.0"
+  },
+  "dependencies": {
+    "grunt-modernizr": "^0.6.1"
   }
 }

@@ -5,6 +5,7 @@
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 		<link rel="home" href="{{ siteUrl }}" />
 		{% includeCssFile "/assets/css/main.css" %}
+		{% includeJsFile "/assets/js/vendor/modernizr-custom.js" %}
 		{% include '_partials/favicons' %}
 	</head>
 	<body>
