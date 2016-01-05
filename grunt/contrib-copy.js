@@ -10,8 +10,6 @@ module.exports = function(grunt) {
 				flatten: false
 			}]
 		}
-
-
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-copy');

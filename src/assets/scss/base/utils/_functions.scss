@@ -1,0 +1,25 @@
+/*
+	Functions
+*/
+
+/*
+Get Color
+Returns a specific theme colour from the map $theme.
+*/
+@function get-color($id, $theme) {
+	@return map-get(map-get($color-schemes, $id), $theme);
+}
+
+/*
+Hover Color Picker
+Asseses the darkness of a color & decides if the hover should be lighter or darker
+*/
+@function hover-picker($color) {
+
+	@if lightness($color) > 60 {
+		@return darken($color, 20);
+	} @else {
+		@return lighten($color, 20);
+	}
+
+}

@@ -1,3 +1,32 @@
 /*
- *	Typography
- */
+    Typography
+*/
+
+/*
+Dead Basic Font Styles
+*/
+// %type-serif {
+//     font-family: $font-serif;
+//     letter-spacing: 0.01em;
+//     line-height: 1.6;
+// }
+//
+// %type-sans {
+//     font-family: $font-sans;
+//     letter-spacing: 0.01em;
+//     line-height: 1.6;
+// }
+
+/*
+Common Type Styles
+*/
+// %type-pageTitle {
+//     @extend %type-sans;
+//     @include font-size(32);
+//
+//     font-weight: bold;
+// }
+
+/*
+Other Type Styles
+*/

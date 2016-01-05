@@ -1,42 +1,58 @@
 /*
- *	Variables
- */
+    Variables
+*/
 
- // structure
- $width-gutter: 20px;
- $width-col: 45px;
- $width-page: 1060px;
- $magic-number: 50px;
+/*
+Structure
+*/
+$width-page: 1440px;
+$magic-number: 50px;
 
- // breakpoints
- $breakpoint-bear: 1060px;
- $breakpoint-fox: 800px;
- $breakpoint-rabbit: 600px;
- $breakpoint-mouse: 480px;
+/*
+Breakpoints
+*/
+$breakpoint-bear: $width-page;
+$breakpoint-wolf: 1040px;
+$breakpoint-fox: 800px;
+$breakpoint-rabbit: 600px;
+$breakpoint-mouse: 480px;
 
- // susy configs
- $susy: (
-	columns: 16,
-	gutters: $width-gutter/$width-col,
-	gutter-position: inside,
-	global-box-sizing: border-box
+/*
+Susy Configs
+*/
+$susy: (
+    columns: 12,
+    gutters: 30/60,
+    gutter-position: inside,
+    global-box-sizing: border-box
 );
 
+$susy-wolf: $susy;
+
 $susy-fox: (
-    columns: 8
+    columns: 6,
+    gutters: 40/90
 );
 
 $susy-rabbit: (
-    columns: 4,
-    gutters: ($width-gutter/$width-col)/2
+    columns: 6,
+    gutters: 40/60
 );
 
 $susy-mouse: (
-    columns: 1
+    columns: 1,
+    gutters: 45/195
 );
 
-// fonts
+/*
+Fonts
+*/
+$base-font-size: 16px;
 
-// colours
+/*
+Colours
+*/
 
-// colours in context
+/*
+Colours in context
+*/
