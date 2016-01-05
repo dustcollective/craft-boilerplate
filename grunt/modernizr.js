@@ -12,7 +12,12 @@ module.exports = function(grunt) {
 				"cssclasses" : true
 			},
 			// true will attempt to match user-contributed tests
-			"matchCommunityTests" : true
+			"matchCommunityTests" : true,
+
+			"parseFiles" : true,
+			"files" : {
+				"src" : ['src/assets/**/*.{js,css,scss}']
+			}
 		}
 	});
 
