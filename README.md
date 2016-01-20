@@ -6,7 +6,7 @@ To create a new Craft project based on this repo, create your new repo. Let's ca
 
 In Feast, add this boilerplate repo as a remote,
 ```
-git remote add boilerplate https://dust.git.beanstalkapp.com/craft-boilerplate.git;
+git remote add boilerplate https://dust.git.beanstalkapp.com/craft-boilerplate.git
 ```
 pull in the contents,
 ```

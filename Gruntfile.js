@@ -47,10 +47,11 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('build', 'Rebuild everything.', [
+		'grunticon',
 		'styles',
 		'scripts',
 		'images',
-		'favicons'
+		// 'favicons'
 	]);
 
 };
