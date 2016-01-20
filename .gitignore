@@ -43,3 +43,4 @@ node_modules/
 
 # Ignore local development stuff.
 nginx.conf
+log/
