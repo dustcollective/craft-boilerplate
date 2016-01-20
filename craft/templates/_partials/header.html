@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="home" href="{{ siteUrl }}" />
 		{% includeCssFile "/assets/css/main.css" %}
 		{% includeJsFile "/assets/js/vendor/modernizr-custom.js" %}
