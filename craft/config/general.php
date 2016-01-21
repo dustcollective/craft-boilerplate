@@ -21,7 +21,8 @@ return array(
         'omitScriptNameInUrls' => true,
         //  'defaultCookieDomain' => '.example.com',
         'defaultWeekStartDay' => 1,
-        'preserveImageColorProfiles' => true
+        'preserveImageColorProfiles' => true,
+        'gaCode' => null
     ),
 
     // Settings when developing locally.
