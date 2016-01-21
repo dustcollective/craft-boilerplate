@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 		},
 		dist: {
 			src: [
-				'<%= dirs.src %>js/main.js'
+				'<%= dirs.src %><%= dirs.js_build_folder %>js/main.js'
 			],
 			dest: '<%= dirs.dest %><%= dirs.js_build_folder %>main.js'
 		},
