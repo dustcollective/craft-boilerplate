@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		},
 		my_target: {
 			files: {
-				'<%= dirs.dest %><%= dirs.js_build_folder %>main.js': ['<%= dirs.dest %><%= dirs.js_build_folder %>main.js']
+				'<%= dirs.dest %><%= dirs.js_build_folder %>main.js': ['<%= dirs.src %><%= dirs.js_build_folder %>main.js']
 			}
 		}
 	});
