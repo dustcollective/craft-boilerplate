@@ -23,3 +23,15 @@ Asseses the darkness of a color & decides if the hover should be lighter or dark
 	}
 
 }
+
+/*
+Tint and Shade.
+Alternative to lighten and darken.
+*/
+@function tint($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+
+@function shade($color, $percent) {
+  @return mix(black, $color, $percent);
+}

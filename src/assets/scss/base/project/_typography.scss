@@ -2,31 +2,178 @@
     Typography
 */
 
+h1, h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    @extend %type-serif;
+    @extend %type-size-bonzai;
+}
+
+a {
+    @include transition(color, 'lion');
+    // color: $color-text-dark;
+}
+
+
+
+
+
+
+
+
+
 /*
 Dead Basic Font Styles
 */
-// %type-serif {
-//     font-family: $font-serif;
-//     letter-spacing: 0.01em;
-//     line-height: 1.6;
-// }
-//
-// %type-sans {
-//     font-family: $font-sans;
-//     letter-spacing: 0.01em;
-//     line-height: 1.6;
-// }
+%type-serif {
+    font-family: $font-serif;
+    // letter-spacing: 0.0095em;
+    // line-height: 1.55;
+}
+
+%type-sans {
+    font-family: $font-sans;
+    // letter-spacing: 0.024em;
+    // line-height: 1.5;
+}
+
+%type-serifUppercase {
+    font-family: $font-serif;
+    text-transform: uppercase;
+    // letter-spacing: 0.175em;
+    // line-height: 1.3;
+}
+
+%type-sansUppercase {
+    font-family: $font-sans;
+    text-transform: uppercase;
+    // letter-spacing: 0.19em;
+    // line-height: 1;
+}
+
+
+
+
+
+
+
+
 
 /*
-Common Type Styles
+Type Sizes.
+You might be lucky enough for the designer to have chosen consistenly responsive
+font sizes. If so, you can define them here and extend from them.
+
+Redwood, Scotspine, Smallpine, Oak, Cactus, Bonzai
+*/
+%type-size-redwood {
+    @include font-sizes(48, 48, 48, 40, 40);
+}
+
+%type-size-scotspine {
+    @include font-sizes(30, 30, 30, 26, 26);
+}
+
+%type-size-smallpine {
+    @include font-sizes(24, 24, 24, 20, 20);
+}
+
+%type-size-oak {
+    @include font-sizes(20, 20, 18, 16, 16);
+}
+
+%type-size-cactus {
+    @include font-sizes(18, 18, 16, 14, 14);
+}
+
+%type-size-bonzai {
+    @include font-sizes(16, 16, 14, 14, 14);
+}
+
+%type-size-seedling {
+    @include font-sizes(12, 12, 12, 12, 12);
+}
+
+
+
+
+
+
+
+
+
+/*
+Common Type Styles.
+Styles that are fairly generic and used widely throughout the site.
+*/
+// %type-title {
+//     @extend %type-sans;
+//     line-height: 1.3;
+// }
+
+
+
+
+
+
+
+
+
+/*
+Contextualised Type Styles.
+Styles that are exactly the same as the Common Type Styles above, but renamed
+so they make sense in the context of the declaration.
+*/
+// %type-articleTitle {
+//     @extend %type-title;
+// }
+
+
+
+
+
+
+
+
+
+/*
+Applied type styles.
+Styles that are the common type styles but with different sizes.
 */
 // %type-pageTitle {
-//     @extend %type-sans;
-//     @include font-size(32);
-//
-//     font-weight: bold;
+//     @extend %type-title;
+//     @extend %type-size-redwood;
 // }
 
+
+
+
+
+
+
+
+
 /*
-Other Type Styles
+Other Type Styles.
+Styles that are unique.
+*/
+// %type-issueSummary {
+//     @extend %type-serif;
+//     @extend %type-size-oak;
+// }
+
+
+
+
+
+
+
+
+
+/*
+Non-abstrated misc type styles.
+Sometimes styles just don't seem to fit anywhere else.
 */

@@ -25,5 +25,59 @@ http://guyroutledge.co.uk/blog/simplify-font-size-with-rems/
 
 @mixin font-size($font-size) {
 	font-size: $font-size * 1px;
-	font-size: $font-size / $base-font-size * 1rem;
+	font-size: $font-size / 16 * 1rem;
+}
+
+/*
+Transition.
+Just makes sure we use consistent speeds and easing.
+*/
+@mixin transition($property, $speed: 'normal') {
+
+	$multiplier: 1;
+	@if ($speed == 'cat') {
+		$multiplier: 4;
+	} @elseif ($speed == 'hyena') {
+		$multiplier: 2;
+	} @elseif ($speed == 'lion') {
+		$multiplier: 0.25;
+	} @elseif ($speed == 'cheetah') {
+		$multiplier: 0.1;
+	}
+
+	transition: $property ($transition-duration * $multiplier) $transition-easing;
+}
+
+/*
+Font Sizes.
+Generates all the font sizes for the different breakpoints.
+*/
+@mixin font-sizes($bear, $wolf, $fox, $rabbit, $mouse) {
+
+	@include font-size($bear);
+
+	@if ($wolf != $bear) {
+		@include susy-breakpoint(max-width $breakpoint-wolf, $susy-wolf) {
+			@include font-size($wolf);
+		}
+	}
+
+	@if ($fox != $wolf) {
+		@include susy-breakpoint(max-width $breakpoint-fox, $susy-fox) {
+			@include font-size($fox);
+		}
+	}
+
+	@if ($rabbit != $fox) {
+		@include susy-breakpoint(max-width $breakpoint-rabbit, $susy-rabbit) {
+			@include font-size($rabbit);
+		}
+	}
+
+	@if ($mouse != $rabbit) {
+		@include susy-breakpoint(max-width $breakpoint-mouse, $susy-mouse) {
+			@include font-size($mouse);
+		}
+	}
+
 }

@@ -45,14 +45,31 @@ $susy-mouse: (
 );
 
 /*
-Fonts
+Fonts.
+Here's where you declare font families, weights etc.
 */
-$base-font-size: 16px;
+$font-sans: sans-serif;
+$font-serif: serif;
 
 /*
-Colours
+Colours.
+All colours used in the project go here. These variables are only used to define
+the Colours In Context variables; they shouldn't be used to colour elements themselves.
 */
+// $color-red: #f00;
 
 /*
 Colours in context
 */
+// $color-border: $color-red;
+
+/*
+Theme Colours
+*/
+// $theme-red-dark: $color-red;
+
+/*
+Misc
+*/
+$transition-duration: 0.4s;
+$transition-easing: ease-in-out;
