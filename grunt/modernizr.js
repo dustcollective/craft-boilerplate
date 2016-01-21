@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.config('modernizr', {
 		dist: {
 			"devFile" : "bower_components/modernizr/modernizr.js",
-			"outputFile" : "<%= dirs.dest %><%= dirs.js_build_folder %>vendor/modernizr-custom.js",
+			"dest" : "<%= dirs.dest %><%= dirs.js_build_folder %>vendor/modernizr-custom.js",
 			"extra" : {
 				"shiv" : true,
 				"printshiv" : false,
