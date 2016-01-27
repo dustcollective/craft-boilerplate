@@ -19,10 +19,10 @@ return array(
         'defaultImageQuality' => 100,
         'maxUploadFileSize' => 40000000,
         'omitScriptNameInUrls' => true,
-        //  'defaultCookieDomain' => '.example.com',
+        // 'defaultCookieDomain' => '.example.com',
         'defaultWeekStartDay' => 1,
         'preserveImageColorProfiles' => true,
-        'gaCode' => null
+        'gaCode' => false
     ),
 
     // Settings when developing locally.
