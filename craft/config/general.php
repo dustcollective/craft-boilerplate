@@ -31,7 +31,8 @@ return array(
         'siteUrl' => array(
             // 'en' => 'http://example.dev/',
         ),
-        'trackUsers' => false
+        'trackUsers' => false,
+        'omitScriptNameInUrls' => false
     ),
 
     // Settings when on the live site.
