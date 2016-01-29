@@ -25,7 +25,8 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('styles', 'Do your styles.', [
-		'sass:dist'
+		'sass:dist',
+		'autoprefixer'
 	]);
 
 	grunt.registerTask('scripts', 'Do your scripts.', [
