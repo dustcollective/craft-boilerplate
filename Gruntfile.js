@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 		'styles',
 		'scripts',
 		'images',
-		// 'favicons'
+		'favicons'
 	]);
 
 };

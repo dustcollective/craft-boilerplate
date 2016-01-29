@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dustcollective/craft-boilerplate"
+    "url": "https://dust.git.beanstalkapp.com/craft-boilerplate.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
