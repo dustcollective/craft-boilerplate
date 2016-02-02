@@ -20,6 +20,7 @@ craft/config/license.key
 
 # ...except templates generated from src.
 /craft/templates/_partials/favicons.html
+/craft/templates/_partials/inlinejs/
 
 # Now ignore everything in public...
 public/*

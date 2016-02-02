@@ -8,6 +8,13 @@
 		{% includeCssFile "/assets/css/main.css" %}
 		{% includeCssFile "/assets/css/icons.css" %}
 		{% include '_partials/favicons' ignore missing %}
+
+		<script>
+			{% include '_partials/inlinejs/loadcss.js' %}
+
+			loadCSS("/assets/css/icons.css");
+			loadCSS("/assets/css/fonts.css");
+		</script>
 	</head>
 	<body>
 		{% include '_partials/grid-overlay' ignore missing %}

@@ -10,7 +10,9 @@
     "node_modules",
     "bower_components"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "loadcss": "^0.2.4"
+  },
   "devDependencies": {
     "modernizr": "~2.8.3",
     "normalize-scss": "~3.0.3",
