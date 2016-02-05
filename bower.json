@@ -17,6 +17,7 @@
     "modernizr": "~2.8.3",
     "normalize-scss": "~3.0.3",
     "susy": "~2.2.6",
-    "tota11y": "~0.0.10"
+    "tota11y": "~0.0.10",
+    "lazysizes": "^1.4.0"
   }
 }
