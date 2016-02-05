@@ -1,0 +1,24 @@
+{% set bearSrc = baseTransform ~ 'Bear' %}
+{% set wolfSrc = baseTransform ~ 'Wolf' %}
+{% set foxSrc = baseTransform ~ 'Fox' %}
+{% set rabbitSrc = baseTransform ~ 'Rabbit' %}
+{% set mouseSrc = baseTransform ~ 'Mouse' %}
+
+{% if lazyLoad is not defined %}
+	{% set isLazyLoad = true %}
+{% else %}
+	{% set isLazyLoad = lazyLoad %}
+{% endif %}
+
+{% set srcAttr = isLazyLoad ? 'data-srcset' : 'srcset' %}
+
+<picture class="image-container{% if fixedHeight %} image-container--fixed-height{% else %} image-container--fluid-height{% endif %}">
+	<!--[if IE 9]><video style="display: none;"><![endif]-->
+	<source {{ srcAttr }}="{{ image.getUrl(bearSrc) }}" media="(min-width: 1041px)">
+	<source {{ srcAttr }}="{{ image.getUrl(wolfSrc) }}" media="(min-width: 801px)">
+	<source {{ srcAttr }}="{{ image.getUrl(foxSrc) }}" media="(min-width: 601px)">
+	<source {{ srcAttr }}="{{ image.getUrl(rabbitSrc) }}" media="(min-width: 481px)">
+	<source {{ srcAttr }}="{{ image.getUrl(mouseSrc) }}">
+	<!--[if IE 9]></video><![endif]-->
+	<img {{ srcAttr }}="{{ image.getUrl(mouseSrc) }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ image.title }}" class="image__image{% if isLazyLoad %} js-lazyLoad{% endif %}">
+</picture>
