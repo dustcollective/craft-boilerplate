@@ -19,7 +19,7 @@ return array(
         'defaultImageQuality' => 100,
         'maxUploadFileSize' => 40000000,
         'omitScriptNameInUrls' => true,
-        // 'defaultCookieDomain' => '.example.com',
+        'defaultCookieDomain' => '.example.com',
         'defaultWeekStartDay' => 1,
         'preserveImageColorProfiles' => true,
         'gaCode' => false
@@ -32,7 +32,8 @@ return array(
             // 'en' => 'http://example.dev/',
         ),
         'trackUsers' => false,
-        'omitScriptNameInUrls' => false
+        'omitScriptNameInUrls' => false,
+        'defaultCookieDomain' => ''
     ),
 
     // Settings when on the live site.
