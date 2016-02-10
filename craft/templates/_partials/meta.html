@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+<link rel="canonical" href="{{ url }}" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="home" href="{{ siteUrl }}" />
+
+{# Open Graph stuff. #}
+<meta property="og:url" content="{{ url }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:site_name" content="{{ siteName }}" />
+{% if image %}<meta property="og:image" content="{{ image }}" />{% endif %}
+<meta property="og:type" content="{{ type }}" />
+<meta property="og:locale" content="en_GB" />
