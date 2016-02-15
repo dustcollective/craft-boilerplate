@@ -31,6 +31,7 @@ return array(
         'siteUrl' => array(
             // 'en' => 'http://example.dev/',
         ),
+        'rootUrl' => 'http://example.dev',
         'trackUsers' => false,
         'omitScriptNameInUrls' => false,
         'defaultCookieDomain' => ''
@@ -41,6 +42,7 @@ return array(
         'siteUrl' => array(
             // 'en' => 'http://example.com/',
         ),
+        'rootUrl' => 'http://example.com',
         'trackUsers' => true
     ),
 
@@ -49,6 +51,7 @@ return array(
         'siteUrl' => array(
             // 'en' => 'http://staging.example.com/',
         ),
+        'rootUrl' => 'http://staging.example.com',
         'trackUsers' => false
     )
 );
