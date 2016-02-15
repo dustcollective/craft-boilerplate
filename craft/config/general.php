@@ -29,7 +29,8 @@ return array(
                 'niceLanguage' => 'English',
                 'dateFormat' => 'jS F Y'
             )
-        )
+        ),
+        'mainLocale' => 'en_gb'
     ),
 
     // Settings when developing locally.
