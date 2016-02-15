@@ -1,0 +1,3 @@
+{% macro formatDate(date='Now') %}
+	{{ date|date(craft.config.locales[craft.locale].dateFormat) }}
+{% endmacro %}

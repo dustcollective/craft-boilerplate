@@ -23,8 +23,12 @@ return array(
         'defaultWeekStartDay' => 1,
         'preserveImageColorProfiles' => true,
         'gaCode' => false,
-        'currentLang' => array(
-            'en_gb' => 'en'
+        'locales' => array(
+            'en_gb' => array(
+                'languageCode' => 'en',
+                'niceLanguage' => 'English',
+                'dateFormat' => 'jS F Y'
+            )
         )
     ),
 
