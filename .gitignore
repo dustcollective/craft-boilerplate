@@ -1,7 +1,7 @@
 # Ignore everthing in craft...
 craft/*
 
-# except plugins...
+# ...except plugins...
 !craft/plugins/
 
 # ...translations...
@@ -25,23 +25,26 @@ craft/config/license.key
 # Now ignore everything in public...
 public/*
 
-# ...except assets...
+# ...except locales...
+#!public/en/
+
+# ...and assets...
 !public/assets/
 
-# ...but do things generated from src.
+# ...but do ignore assets generated from src.
 public/assets/css/
 public/assets/js/
 public/assets/img/
 
-# Ignore dependencies.
+# Now ignore dependencies...
 bower_components/
 node_modules/
 
-# Ignore debris.
+# ...debris...
 .sass-cache/
 *.css.map
 .DS_Store
 
-# Ignore local development stuff.
+# ...and local development stuff.
 nginx.conf
 log/
