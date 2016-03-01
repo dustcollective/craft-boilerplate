@@ -17,16 +17,31 @@ might need to @include clearfix() instead.
 	}
 }
 
+
+
+
+
+
+
+
+
 /*
 Font Size.
 Produces rem font sizes from px.
 http://guyroutledge.co.uk/blog/simplify-font-size-with-rems/
 */
-
 @mixin font-size($font-size) {
 	font-size: $font-size * 1px;
 	font-size: $font-size / 16 * 1rem;
 }
+
+
+
+
+
+
+
+
 
 /*
 Transition.
@@ -47,6 +62,31 @@ Just makes sure we use consistent speeds and easing.
 
 	transition: $property ($transition-duration * $multiplier) $transition-easing;
 }
+
+
+
+
+
+
+
+
+
+/*
+Font Stack.
+Currently this doesn't do anything, but the idea is that this will eventually do
+clever FOUT stuff.
+*/
+@mixin font-stack($stack) {
+	font-family: $stack;
+}
+
+
+
+
+
+
+
+
 
 /*
 Font Sizes.

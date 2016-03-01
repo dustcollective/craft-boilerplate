@@ -1,5 +1,7 @@
 {% import '_macros/general' as macros %}
 
+{% set isHomepage = (entry is defined ? entry.section.isHomepage() : false) %}
+
 {% include '_partials/header' %}
 
 <main>

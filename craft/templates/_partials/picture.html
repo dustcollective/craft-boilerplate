@@ -22,4 +22,4 @@
 	<!--[if IE 9]></video><![endif]-->
 	<img {{ srcAttr }}="{{ image.getUrl(mouseSrc) }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ image.title }}" class="image__image{% if isLazyLoad %} js-lazyLoad{% endif %}">
 </picture>
-{% if isLazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}">{{ image.title }}</span>{% endif %}
+{% if isLazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}"></span>{% endif %}

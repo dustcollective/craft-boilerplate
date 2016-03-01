@@ -37,6 +37,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('images', 'Do your images.', [
 		'clean',
+		'svgmin',
 		'imagemin:all'
 	]);
 
@@ -48,6 +49,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('build', 'Rebuild everything.', [
+		// 'copy:fonts',
 		'grunticon',
 		'styles',
 		'scripts',

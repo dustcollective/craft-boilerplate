@@ -1,3 +1,34 @@
-{% macro formatDate(date='Now') %}
-	{{ date|date(craft.config.locales[craft.locale].dateFormat) }}
+{#
+formatDate.
+Pass in a date, and it'll return that date nicely formatted per locale.
+The dateFormat setting is in config/general.php
+#}
+{% macro formatDate(date='Now', format=null) %}
+
+	{% if format == null %}
+		{% set format = craft.config.locales[craft.locale].dateFormat %}
+	{% endif %}
+
+	{{ date|date(format) }}
 {% endmacro %}
+
+{#
+getTheme.
+Pass in a slug, and if there's a theme associated with it it'll return the theme name.
+Usually used in class names, so class="theme--[[ getTheme(slug) ]]", then those
+elements will be styled from _theme.scss.
+#}
+{% macro getTheme(slug) %}{% spaceless %}
+
+	{% switch slug %}
+
+		{% case 'example-one' %}
+			blue
+		{% case 'example-two' %}
+			green
+		{% default %}
+			blue
+
+	{% endswitch %}
+
+{% endspaceless %}{% endmacro %}

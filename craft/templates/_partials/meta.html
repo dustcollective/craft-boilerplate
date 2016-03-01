@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+<title>{% if (title is defined) and (not isHomepage) %}{{ title }} - {% endif %}{{ siteName }}</title>
 <meta name="description" content="{{ description }}" />
 
 <link rel="canonical" href="{{ url }}" />

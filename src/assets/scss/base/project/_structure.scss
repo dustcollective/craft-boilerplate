@@ -11,4 +11,5 @@ html {
 
 .container {
 	@include container($width-page);
+	position: relative;
 }

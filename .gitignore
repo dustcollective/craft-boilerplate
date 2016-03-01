@@ -36,6 +36,7 @@ public/*
 public/assets/css/
 public/assets/js/
 public/assets/img/
+public/assets/fonts/
 
 # Now ignore dependencies...
 bower_components/
