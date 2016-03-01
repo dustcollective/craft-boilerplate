@@ -56,12 +56,12 @@ Colours.
 All colours used in the project go here. These variables are only used to define
 the Colours In Context variables; they shouldn't be used to colour elements themselves.
 */
-// $color-red: #f00;
+$color-black: #000;
 
 /*
 Colours in context
 */
-// $color-border: $color-red;
+$color-text-dark: $color-black;
 
 /*
 Theme Colours
