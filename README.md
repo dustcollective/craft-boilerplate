@@ -18,15 +18,14 @@ git remote set-url --push boilerplate no_push
 ```
 
 ### Setting Up
-Feast is built with <a href="//craftcms.com/">Craft</a>, but the Craft source files are not included with this repo. That would be ridiculous.
+Feast is built with [Craft](http://craftcms.com), but the Craft source files are not included with this repo. That would be ridiculous.
 
 So to get it working:
 * clone the repo,
-* download the <a href="http://craftcms.com/latest.zip?accept_license=yes">latest Craft build</a>,
+* download the [latest Craft build](http://craftcms.com/latest.zip?accept_license=yes),
 * copy the contents of public/,
-* copy craft/app/,
-* copy craft/plugins and craft/storage,
-* copy the example craft/config/db.php, and put in your db settings.
+* copy craft/app/, craft/plugins and craft/storage,
+* copy example-db.php into craft/config/db.php, and update your db settings.
 
 We compile all our assets using Grunt. So first run ```npm i``` to install the node modules, ```bower update``` to install the bower components, and then ```grunt build``` to generate all the assets.
 
