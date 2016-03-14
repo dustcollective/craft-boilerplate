@@ -48,5 +48,4 @@ node_modules/
 .DS_Store
 
 # ...and local development stuff.
-nginx.conf
 log/
