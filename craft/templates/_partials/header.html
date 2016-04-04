@@ -8,7 +8,7 @@
 			'description' : entry.description,
 			'image' : (entry.leadImage is not empty ? entry.leadImage.first().getUrl() : false),
 			'type' : 'website'
-		} only %}
+		} %}
 
 		{% include '_partials/favicons' ignore missing %}
 
@@ -16,13 +16,6 @@
 			{% include ['_partials/inline/' ~ (entry is defined ? entry.slug : 'critical') ~ '.css', '_partials/inline/critical.css'] ignore missing %}
 		</style>
 
-		<script>
-			{% include '_partials/inline/loadcss.js' %}
-
-			loadCSS("/assets/css/main.css");
-			loadCSS("/assets/css/icons.css");
-			loadCSS("/assets/css/fonts.css");
-		</script>
 	</head>
 	<body>
 		{% include '_partials/grid-overlay' ignore missing %}
