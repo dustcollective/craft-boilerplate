@@ -1,12 +1,12 @@
-# craft-boilerplate
-A starting point for using CraftCMS with SASS Grunt tasks.
+# Craft Boilerplate
+A starting point for creating new Craft projects.
 
 ## Getting Started
 To create a new Craft project based on this repo, create your new repo. Let's call it Feast.
 
 In Feast, add this boilerplate repo as a remote,
 ```
-git remote add boilerplate https://dust.git.beanstalkapp.com/craft-boilerplate.git
+git remote add boilerplate https://github.com/dustcollective/craft-boilerplate.git
 ```
 pull in the contents,
 ```
