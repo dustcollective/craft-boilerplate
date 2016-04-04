@@ -9,7 +9,6 @@
 
 return array(
     '*' => array(
-        'dateFormat' => 'jS F Y',
         'defaultFilePermissions' => 0664,
         'defaultFolderPermissions' => 0775,
         'addTrailingSlashesToUrls' => true,
@@ -19,7 +18,7 @@ return array(
         'defaultImageQuality' => 100,
         'maxUploadFileSize' => 40000000,
         'omitScriptNameInUrls' => true,
-        'defaultCookieDomain' => '.example.com',
+        // 'defaultCookieDomain' => '.example.com',
         'defaultWeekStartDay' => 1,
         'preserveImageColorProfiles' => true,
         'gaCode' => false,

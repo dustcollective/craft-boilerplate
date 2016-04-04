@@ -1,3 +1,15 @@
 /*
 	Grids.
+	This is where you define your abstracted grids used within the project,
+	prefixed with %grid-
+	You can then extend these classes from your styles, keeping each scss file
+	free from clutter.
+*/
+
+/*
+%grid-pageHeader {
+	@include pre(1);
+	@include span(5);
+	@include post(6);
+}
 */
