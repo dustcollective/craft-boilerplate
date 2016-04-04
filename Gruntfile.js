@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('scripts', 'Do your scripts.', [
-		'concat:dist',
+		'concat',
 		'uglify',
 		'modernizr'
 	]);
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('dev', 'Rebuild everything.', [
 		'sass:dev',
-		'concat:dev',
+		'concat',
 		'modernizr',
 		'images'
 	]);

@@ -10,14 +10,30 @@
 			{% include '_partials/inline/loadcss.js' %}
 			{% include '_partials/inline/onloadcss.js' %}
 
-			loadCSS("/assets/css/icons.css");
-			loadCSS("/assets/css/fonts.css");
+			// loadCSS("/assets/css/icons.css");
+			// var fontStyles = loadCSS("/assets/css/fonts.css");
 			var mainStyles = loadCSS("/assets/css/main.css");
 
 			onloadCSS(mainStyles, function() {
 				var element = document.getElementById("js-critical-css");
 				element.parentNode.removeChild(element);
 			})
+
+			{#
+			// load in the fonts once fonts.css is in.
+			onloadCSS(fontStyles, function() {
+
+				var observer1 = new FontFaceObserver("font-one");
+				var observer2 = new FontFaceObserver("font-two");
+				var observer3 = new FontFaceObserver("font-three");
+				var observer4 = new FontFaceObserver("font-four");
+
+				Promise.all([observer1.check(), observer2.check(), observer3.check(), observer4.check()]).then(function () {
+					document.documentElement.className = document.documentElement.className.replace( /(?:^|\s)no-webfonts(?!\S)/g , '' );
+					document.documentElement.className += " webfonts-loaded";
+				});
+			});
+			#}
 		</script>
 
 		{#

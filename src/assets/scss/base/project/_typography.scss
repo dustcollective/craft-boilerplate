@@ -1,5 +1,9 @@
 /*
-    Typography
+    Typography.
+    This is where you define your abstracted type styles used within the project,
+	prefixed with %type-
+    You can then extend these classes from your styles, maintaining consistency
+    of type throughout the project.
 */
 
 h1, h2, h3 {
@@ -31,6 +35,10 @@ li {
 
 /*
 Dead Basic Font Styles.
+This is where abstracted font declarations are defined. Here you can set
+type attributes like letter-spacing and line-height, so whenever these styles
+are extended, they've all got consistent properties.
+Note the use of variables eg $font-sans; these are defined in _variables.scss
 */
 %type-serif {
     font-family: $font-serif;
@@ -71,34 +79,37 @@ Type Sizes.
 You might be lucky enough for the designer to have chosen consistenly responsive
 font sizes. If so, you can define them here and extend from them.
 
-Redwood, Scotspine, Smallpine, Oak, Cactus, Bonzai
+Redwood, Scotspine, Smallpine, Oak, Cactus, Bonzai, Seedling.
+
+Note the use of the font-sizes mixin. This is used to generate the media queries
+for these font sizes, and is defined in _mixins.scss
 */
 %type-size-redwood {
-    @include font-sizes(48, 48, 48, 40, 40);
+    // @include font-sizes(48, 48, 48, 40, 40);
 }
 
 %type-size-scotspine {
-    @include font-sizes(30, 30, 30, 26, 26);
+    // @include font-sizes(30, 30, 30, 26, 26);
 }
 
 %type-size-smallpine {
-    @include font-sizes(24, 24, 24, 20, 20);
+    // @include font-sizes(24, 24, 24, 20, 20);
 }
 
 %type-size-oak {
-    @include font-sizes(20, 20, 18, 16, 16);
+    // @include font-sizes(20, 20, 18, 16, 16);
 }
 
 %type-size-cactus {
-    @include font-sizes(18, 18, 16, 14, 14);
+    // @include font-sizes(18, 18, 16, 14, 14);
 }
 
 %type-size-bonzai {
-    @include font-sizes(16, 16, 14, 14, 14);
+    // @include font-sizes(16, 16, 14, 14, 14);
 }
 
 %type-size-seedling {
-    @include font-sizes(12, 12, 12, 12, 12);
+    // @include font-sizes(12, 12, 12, 12, 12);
 }
 
 

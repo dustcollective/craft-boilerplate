@@ -3,14 +3,23 @@ formatDate.
 Pass in a date, and it'll return that date nicely formatted per locale.
 The dateFormat setting is in config/general.php
 #}
-{% macro formatDate(date='Now', format=null) %}
+{% macro formatDate(date='Now', format=null) %}{% spaceless %}
 
 	{% if format == null %}
 		{% set format = craft.config.locales[craft.locale].dateFormat %}
 	{% endif %}
 
 	{{ date|date(format) }}
-{% endmacro %}
+	
+{% endspaceless %}{% endmacro %}
+
+
+
+
+
+
+
+
 
 {#
 getTheme.
