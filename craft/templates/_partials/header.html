@@ -5,8 +5,8 @@
 		{% include '_partials/meta' with {
 			'url' : entry.getUrl(),
 			'title' : entry.title,
-			'description' : entry.description,
-			'image' : (entry.leadImage is not empty ? entry.leadImage.first().getUrl() : false),
+			'description' : (entry['description'] is defined ? entry.description : ''),
+			'image' : (entry['leadImage'] is defined and entry.leadImage is not empty ? entry.leadImage.first().getUrl() : false),
 			'type' : 'website'
 		} %}
 

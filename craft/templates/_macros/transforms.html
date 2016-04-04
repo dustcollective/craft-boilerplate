@@ -1,0 +1,35 @@
+{% macro getTransform(image, transform, size) %}{% spaceless %}
+
+	{% set transforms = {
+		'default' : {
+			'quality' : 100,
+			'position' : 'center-center',
+			'mode' : 'crop'
+		},
+		'example' : {
+			'default' : {
+				'format' : 'png',
+			},
+			'bear' : {
+				'width' : 220
+			},
+			'wolf' : {
+				'width' : 220
+			},
+			'fox' : {
+				'width' : 175
+			},
+			'rabbit' : {
+				'width' : 175
+			},
+			'mouse' : {
+				'width' : 175
+			}
+		}
+	} %}
+
+	{% set thistransform = transforms.default|merge( transforms[transform]['default'] )|merge( transforms[transform][size] ) %}
+
+	{{ image.getUrl(thistransform) }}
+
+{% endspaceless %}{% endmacro %}

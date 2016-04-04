@@ -1,25 +1,21 @@
-{% set bearSrc = baseTransform ~ 'Bear' %}
-{% set wolfSrc = baseTransform ~ 'Wolf' %}
-{% set foxSrc = baseTransform ~ 'Fox' %}
-{% set rabbitSrc = baseTransform ~ 'Rabbit' %}
-{% set mouseSrc = baseTransform ~ 'Mouse' %}
-
 {% if lazyLoad is not defined %}
-	{% set isLazyLoad = true %}
-{% else %}
-	{% set isLazyLoad = lazyLoad %}
+	{% set lazyLoad = true %}
 {% endif %}
 
-{% set srcAttr = isLazyLoad ? 'data-srcset' : 'srcset' %}
+{% if alt is not defined %}
+	{% set alt = image.title %}
+{% endif %}
+
+{% set srcAttr = lazyLoad ? 'data-srcset' : 'srcset' %}
 
 <picture class="image-container{% if fixedHeight %} image-container--fixed-height{% else %} image-container--fluid-height{% endif %}">
 	<!--[if IE 9]><video style="display: none;"><![endif]-->
-	<source {{ srcAttr }}="{{ image.getUrl(bearSrc) }}" media="(min-width: 1041px)">
-	<source {{ srcAttr }}="{{ image.getUrl(wolfSrc) }}" media="(min-width: 801px)">
-	<source {{ srcAttr }}="{{ image.getUrl(foxSrc) }}" media="(min-width: 601px)">
-	<source {{ srcAttr }}="{{ image.getUrl(rabbitSrc) }}" media="(min-width: 481px)">
-	<source {{ srcAttr }}="{{ image.getUrl(mouseSrc) }}">
+	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'bear') }}" media="(min-width: 1041px)">
+	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'wolf') }}" media="(min-width: 801px)">
+	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'fox') }}" media="(min-width: 601px)">
+	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'rabbit') }}" media="(min-width: 481px)">
+	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'mouse') }}">
 	<!--[if IE 9]></video><![endif]-->
-	<img {{ srcAttr }}="{{ image.getUrl(mouseSrc) }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ image.title }}" class="image__image{% if isLazyLoad %} js-lazyLoad{% endif %}">
+	<img {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'mouse') }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ alt }}" class="image__image{% if lazyLoad %} js-lazyLoad{% endif %}">
 </picture>
-{% if isLazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}"></span>{% endif %}
+{% if lazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}"></span>{% endif %}
