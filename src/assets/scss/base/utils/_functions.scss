@@ -35,3 +35,49 @@ Alternative to lighten and darken.
 @function shade($color, $percent) {
   @return mix(black, $color, $percent);
 }
+
+/*
+Magic Number.
+Converts magic number pixel values to ems.
+*/
+@function magic-number($font-size: 16, $multiplier: 'm') {
+
+	@if ($multiplier == 'm') {
+		$multiplier: 1;
+	} @elseif ($multiplier == 'xs') {
+		$multiplier: 0.375;
+	} @elseif ($multiplier == 's') {
+		$multiplier: 0.625;
+	} @elseif ($multiplier == 'l') {
+		$multiplier: 2;
+	} @elseif ($multiplier == 'xl') {
+		$multiplier: 3;
+	} @elseif ($multiplier == 'xxl') {
+		$multiplier: 5;
+	}
+
+	$mn: 40;
+
+	@return ((($mn * $multiplier) / $font-size) * 1em);
+}
+
+
+
+
+
+
+
+
+
+/*
+Text Colour Picker
+*/
+@function text-color-picker($color) {
+
+	@if lightness($color) > 60 {
+		@return $color-text-dark;
+	} @else {
+		@return $color-text-light;
+	}
+
+}

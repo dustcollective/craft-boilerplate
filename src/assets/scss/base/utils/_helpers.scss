@@ -56,3 +56,31 @@ Accessiblity-friendlier way to hide text from h5b
 	position: absolute;
 	width: 1px;
 }
+
+%cover-object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+%v-centred {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%h-centred {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%hv-centred {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: translate3d(-50%, -50%, 0);
+}

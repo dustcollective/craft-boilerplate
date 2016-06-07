@@ -22,7 +22,7 @@ a {
 }
 
 li {
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 }
 
 
@@ -126,7 +126,7 @@ Styles that are fairly generic and used widely throughout the site.
 */
 %type-body {
     @extend %type-sans;
-    @extend %type-size-bonzai;
+    // @extend %type-size-bonzai;
 }
 
 

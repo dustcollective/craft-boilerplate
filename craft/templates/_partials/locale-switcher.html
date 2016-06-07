@@ -1,0 +1,19 @@
+{# Loop through all of the site locales, except the current one #}
+{% set otherLocales = craft.i18n.getSiteLocaleIds()|without(craft.locale) %}
+{% for locale in otherLocales %}
+
+    {# Find the current entry in the other locale #}
+    {% set localeEntry = (entry is defined ? craft.entries.id(entry.id).locale(locale).first : null) %}
+
+    {# Make sure that it's actually localized to this locale #}
+    {% if (localeEntry) and (localeEntry.locale == locale) %}
+
+        {# Output a link to it #}
+        <a rel="alternate" hreflang="{{ craft.config.locales[locale].languageCode }}" href="{{ localeEntry.getUrl() }}">{{ "View this page in"|t(language=locale) }} {{ craft.config.locales[locale].niceLanguage }}</a>
+    {% else %}
+
+        {# Output a link to the hompage #}
+        <a href="{{ craft.config.siteUrl[locale] }}">{{ "View this website in"|t(language=locale) }} {{ craft.config.locales[locale].niceLanguage }}</a>
+    {% endif %}
+
+{% endfor %}

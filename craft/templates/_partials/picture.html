@@ -1,21 +1,27 @@
-{% if lazyLoad is not defined %}
-	{% set lazyLoad = true %}
-{% endif %}
-
-{% if alt is not defined %}
-	{% set alt = image.title %}
-{% endif %}
-
+{% set lazyLoad = lazyLoad ?? true %}
 {% set srcAttr = lazyLoad ? 'data-srcset' : 'srcset' %}
+{% set alt = alt ?? image.title ?? '' %}
+{% set image = image ?? null %}
 
-<picture class="image-container{% if fixedHeight %} image-container--fixed-height{% else %} image-container--fluid-height{% endif %}">
-	<!--[if IE 9]><video style="display: none;"><![endif]-->
-	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'bear') }}" media="(min-width: 1041px)">
-	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'wolf') }}" media="(min-width: 801px)">
-	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'fox') }}" media="(min-width: 601px)">
-	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'rabbit') }}" media="(min-width: 481px)">
-	<source {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'mouse') }}">
-	<!--[if IE 9]></video><![endif]-->
-	<img {{ srcAttr }}="{{ transforms.getTransform(image, transform, 'mouse') }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ alt }}" class="image__image{% if lazyLoad %} js-lazyLoad{% endif %}">
-</picture>
-{% if lazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}"></span>{% endif %}
+{% set type = type ?? null %}
+{% if fixedHeight is defined %}
+	{% if fixedHeight == true %}
+		{% set type = 'fixed' %}
+	{% else %}
+		{% set type = 'fluid' %}
+	{% endif %}
+{% endif %}
+
+{% if image and type %}
+	<picture class="image-container{% if type == 'fixed' %} image-container--fixed-height{% elseif type == 'fluid' %} image-container--fluid-height{% elseif type == 'centred' %} image-container--centred{% endif %}">
+		<!--[if IE 9]><video style="display: none;"><![endif]-->
+		<source {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'bear') }}" media="(min-width: 1041px)">
+		<source {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'wolf') }}" media="(min-width: 801px)">
+		<source {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'fox') }}" media="(min-width: 601px)">
+		<source {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'rabbit') }}" media="(min-width: 481px)">
+		<source {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'mouse') }}">
+		<!--[if IE 9]></video><![endif]-->
+		<img {{ srcAttr }}="{{ transforms.getTransform(image, baseTransform, 'mouse') }}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ alt }}" class="image__image{% if lazyLoad %} js-lazyLoad{% endif %}">
+	</picture>
+	{% if lazyLoad %}<span class="visuallyhidden" href="{{ image.getUrl() }}"></span>{% endif %}
+{% endif %}

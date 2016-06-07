@@ -1,5 +1,5 @@
 {
-  "name": "craft-boilerplate",
+  "name": "dust-craft-boilerplate",
   "version": "0.1.0",
   "authors": [
     "Michael Westwood <michael@du.st>"
@@ -13,8 +13,7 @@
   "dependencies": {
     "loadcss": "^0.2.4",
     "lazysizes": "^1.4.0",
-    "picturefill": "^3.0.2",
-    "modernizr": "~2.8.3"
+    "picturefill": "^3.0.2"
   },
   "devDependencies": {
     "normalize-scss": "~3.0.3",

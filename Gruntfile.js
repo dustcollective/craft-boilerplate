@@ -31,20 +31,17 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('scripts', 'Do your scripts.', [
 		'concat',
-		'uglify',
-		'modernizr'
+		'uglify'
 	]);
 
 	grunt.registerTask('images', 'Do your images.', [
 		'clean',
-		'svgmin',
-		'imagemin:all'
+		'svgmin'
 	]);
 
 	grunt.registerTask('dev', 'Rebuild everything.', [
 		'sass:dev',
 		'concat',
-		'modernizr',
 		'images'
 	]);
 

@@ -4,7 +4,7 @@
 
 {% extends "_layouts/default" %}
 {% set title = "404" %}
-{% set fourohfour %}ga(‘send’, ‘pageview’, ‘/404/?url=‘ + document.location.pathname + document.location.search ‘&ref=‘ + document.referrer);{% endset %}
+{% set alternativeTracking %}ga('send', 'pageview', '/404/?url=' + document.location.pathname + document.location.search + '&ref=' + document.referrer);{% endset %}
 
 {% block content %}
 

@@ -2,8 +2,13 @@
 craft/*
 
 # ...except specified plugins...
+!craft/plugins/
 craft/plugins/*
-# eg !craft/plugins/example/
+!craft/plugins/anchor/
+!craft/plugins/cachey/
+!craft/plugins/emailwrap/
+!craft/plugins/refreshstring/
+!craft/plugins/typogrify/
 
 # ...translations...
 !craft/translations/
@@ -38,6 +43,9 @@ public/assets/js/
 public/assets/img/
 public/assets/fonts/
 
+# Ignore dev stuff.
+dev/
+
 # Now ignore dependencies...
 bower_components/
 node_modules/
@@ -46,6 +54,7 @@ node_modules/
 .sass-cache/
 *.css.map
 .DS_Store
+npm-debug.log
 
 # ...and local development stuff.
 log/
