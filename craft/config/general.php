@@ -36,7 +36,7 @@ return array(
     'example.dev' => array(
         'devMode' => true,
         'siteUrl' => array(
-            'en' => 'http://example.dev/'
+            'en_gb' => 'http://example.dev/'
         ),
         'rootUrl' => 'http://example.dev',
         'trackUsers' => false,
@@ -47,7 +47,7 @@ return array(
     // Settings when on the live site.
     'example.com' => array(
         'siteUrl' => array(
-            'en' => 'http://example.com/'
+            'en_gb' => 'http://example.com/'
         ),
         'rootUrl' => 'http://example.com',
         'trackUsers' => true
@@ -56,7 +56,7 @@ return array(
     // Settings when on the staging site.
     'staging.example.com' => array(
         'siteUrl' => array(
-            'en' => 'http://staging.example.com/'
+            'en_gb' => 'http://staging.example.com/'
         ),
         'rootUrl' => 'http://staging.example.com',
         'trackUsers' => false

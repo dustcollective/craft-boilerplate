@@ -23,19 +23,19 @@
     }
 }
 
-@include susy-breakpoint(max-width $breakpoint-fox, $susy-fox) {
+@include at-fox {
     .debug-grid__column {
         @include span(1);
     }
 }
 
-@include susy-breakpoint(max-width $breakpoint-rabbit, $susy-rabbit) {
+@include at-rabbit {
     .debug-grid__column {
         @include span(1);
     }
 }
 
-@include susy-breakpoint(max-width $breakpoint-mouse, $susy-mouse) {
+@include at-mouse {
     .debug-grid__column {
         @include span(1);
     }

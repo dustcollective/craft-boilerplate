@@ -2,8 +2,13 @@
 craft/*
 
 # ...except specified plugins...
+!craft/plugins/
 craft/plugins/*
-# eg !craft/plugins/example/
+!craft/plugins/anchor/
+!craft/plugins/cachey/
+!craft/plugins/emailwrap/
+!craft/plugins/refreshstring/
+!craft/plugins/typogrify/
 
 # ...translations...
 !craft/translations/
@@ -37,6 +42,9 @@ public/assets/css/
 public/assets/js/
 public/assets/img/
 public/assets/fonts/
+
+# Ignore dev stuff.
+dev/
 
 # Now ignore dependencies...
 bower_components/

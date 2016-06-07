@@ -17,13 +17,15 @@
 <meta property="og:locale" content="en_GB" />
 
 {# language stuff. #}
-{% set otherLocales = craft.i18n.getSiteLocaleIds()|without(craft.config.mainLocale) %}
-{% for locale in otherLocales %}
+{% if entry is defined %}
+    {% set otherLocales = craft.i18n.getSiteLocaleIds()|without(craft.config.mainLocale) %}
+    {% for locale in otherLocales %}
 
-    {% set localeEntry = craft.entries.id(entry.id).locale(locale).first %}
+        {% set localeEntry = craft.entries.id(entry.id).locale(locale).first %}
 
-    {% if localeEntry.locale == locale %}
-        <link rel="alternate" hreflang="{{ craft.config.locales[locale].languageCode }}" href="{{ localeEntry.getUrl() }}">{{ craft.config.locales[locale].niceLanguage }}</link>
-    {% endif %}
+        {% if (localeEntry) and (localeEntry.locale == locale) %}
+            <link rel="alternate" hreflang="{{ craft.config.locales[locale].languageCode }}" href="{{ localeEntry.getUrl() }}" />
+        {% endif %}
 
-{% endfor %}
+    {% endfor %}
+{% endif %}

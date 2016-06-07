@@ -97,27 +97,68 @@ Generates all the font sizes for the different breakpoints.
 	@include font-size($bear);
 
 	@if ($wolf != $bear) {
-		@include susy-breakpoint(max-width $breakpoint-wolf, $susy-wolf) {
+		@include at-wolf {
 			@include font-size($wolf);
 		}
 	}
 
 	@if ($fox != $wolf) {
-		@include susy-breakpoint(max-width $breakpoint-fox, $susy-fox) {
+		@include at-fox {
 			@include font-size($fox);
 		}
 	}
 
 	@if ($rabbit != $fox) {
-		@include susy-breakpoint(max-width $breakpoint-rabbit, $susy-rabbit) {
+		@include at-rabbit {
 			@include font-size($rabbit);
 		}
 	}
 
 	@if ($mouse != $rabbit) {
-		@include susy-breakpoint(max-width $breakpoint-mouse, $susy-mouse) {
+		@include at-mouse {
 			@include font-size($mouse);
 		}
 	}
 
+}
+
+
+
+
+
+
+
+
+
+/*
+Breakpoints.
+*/
+@mixin at-bear() {
+	@include susy-breakpoint(max-width $breakpoint-bear, $susy-bear) {
+		@content;
+	}
+}
+
+@mixin at-wolf() {
+	@include susy-breakpoint(max-width $breakpoint-wolf, $susy-wolf) {
+		@content;
+	}
+}
+
+@mixin at-fox() {
+	@include susy-breakpoint(max-width $breakpoint-fox, $susy-fox) {
+		@content;
+	}
+}
+
+@mixin at-rabbit() {
+	@include susy-breakpoint(max-width $breakpoint-rabbit, $susy-rabbit) {
+		@content;
+	}
+}
+
+@mixin at-mouse() {
+	@include susy-breakpoint(max-width $breakpoint-mouse, $susy-mouse) {
+		@content;
+	}
 }
