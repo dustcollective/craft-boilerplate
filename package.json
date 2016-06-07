@@ -1,9 +1,9 @@
 {
-    "name": "dust-craft-boilerplate",
+    "name": "craft-boilerplate",
     "version": "0.1.0",
     "repository": {
         "type": "git",
-        "url": "https://dust.git.beanstalkapp.com/craft-boilerplate.git"
+        "url": "https://github.com/dustcollective/craft-boilerplate.git"
     },
     "devDependencies": {
         "grunt": "^1.0.1",
