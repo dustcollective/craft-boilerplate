@@ -54,6 +54,7 @@ node_modules/
 .sass-cache/
 *.css.map
 .DS_Store
+npm-debug.log
 
 # ...and local development stuff.
 log/

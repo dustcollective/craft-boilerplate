@@ -42,7 +42,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev', 'Rebuild everything.', [
 		'sass:dev',
 		'concat',
-		'modernizr',
 		'images'
 	]);
 
