@@ -2,6 +2,43 @@
 	Mixins
 */
 
+
+
+
+
+
+
+
+
+/*
+Type.
+Grabs properties from the $map to create type styles and sizes.
+*/
+@mixin type($family, $size: none, $style-map: $type-styles, $size-map: $type-sizes) {
+
+    // font styles.
+    @if map-has-key($style-map, $family) {
+        $type-style: map-get($style-map, $family);
+        @each $key, $value in $type-style {
+            #{$key}: $value
+        }
+    }
+
+    // sizes.
+    @if map-has-key($size-map, $size) {
+        $type-size: map-get($size-map, $size);
+        @include font-sizes($type-size...);
+    }
+}
+
+
+
+
+
+
+
+
+
 /*
 Clearfix.
 Does the same as @extend %clearfix, but due to cascading issues sometimes you
