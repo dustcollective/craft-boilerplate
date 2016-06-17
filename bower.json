@@ -13,7 +13,8 @@
   "dependencies": {
     "loadcss": "^0.2.4",
     "lazysizes": "^1.4.0",
-    "picturefill": "^3.0.2"
+    "picturefill": "^3.0.2",
+    "fontfaceobserver": "^1.6.5"
   },
   "devDependencies": {
     "normalize-scss": "~3.0.3",
