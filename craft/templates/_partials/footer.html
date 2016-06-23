@@ -6,6 +6,7 @@
 		Load in css in a non-blocking way. Remove the critical css when the main
 		css is loaded to avoid conflicts.
 		#}
+		<span class="visuallyhidden loadcss-check js-loadcss-check">main.css loaded.</span>
 		<script>
 			{% include '_partials/inline/fontfaceobserver.js' %}
 			{% include '_partials/inline/loadcss.js' %}
@@ -16,10 +17,20 @@
 			var mainStyles = loadCSS("/assets/css/main.css");
 
 			onloadCSS(mainStyles, function() {
-				window.setTimeout(function() {
-					var element = document.getElementById("js-critical-css");
-					element.parentNode.removeChild(element);
-				}, 1000)
+
+				// once the styles are loaded, check that they've actually been
+				// applied before removing the critical. This avoids a flash.
+				var elem = document.getElementsByClassName('js-loadcss-check')[0];
+				var loadcsstimer = setInterval(function() {
+
+					if ( window.getComputedStyle(elem)['backgroundColor'] == 'rgb(255, 192, 203)' ) {
+						var element = document.getElementById("js-critical-css");
+						element.parentNode.removeChild(element);
+						element.parentNode.removeChild(elem);
+						window.clearInterval(loadcsstimer);
+					}
+
+				}, 100);
 			});
 
 			{#

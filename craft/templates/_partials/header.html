@@ -13,6 +13,7 @@
 		{% include '_partials/favicons' ignore missing %}
 
 		<style id="js-critical-css">
+			svg { opacity: 0; }
 			{% include ['_partials/inline/' ~ (entry is defined ? entry.slug : 'critical') ~ '.css', '_partials/inline/critical.css'] ignore missing %}
 		</style>
 
