@@ -36,6 +36,14 @@ $type-styles: (
 );
 
 /*
+An object of fallback type styles, for use with the type() mixin.
+Here you can define different properies like letter-spacing to have the fallback
+fonts look as similar to the real fonts as possible, to avoid a massive reflow
+when the fonts are loaded.
+*/
+$fallback-type-styles: ();
+
+/*
 An object of type sizes, for use with the type() mixin.
 */
 $type-sizes: (

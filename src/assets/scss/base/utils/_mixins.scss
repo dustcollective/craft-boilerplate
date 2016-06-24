@@ -14,14 +14,25 @@
 Type.
 Grabs properties from the $map to create type styles and sizes.
 */
-@mixin type($family, $size: none, $style-map: $type-styles, $size-map: $type-sizes) {
+@mixin type($family, $size: none, $style-map: $type-styles, $size-map: $type-sizes, $fallback-map: $fallback-type-styles) {
 
     // font styles.
     @if map-has-key($style-map, $family) {
         $type-style: map-get($style-map, $family);
+
         @each $key, $value in $type-style {
             #{$key}: $value
         }
+    }
+
+	// fallback font styles.
+	@if map-has-key($fallback-map, $family) {
+        $type-style: map-get($fallback-map, $family);
+		.no-webfonts & {
+	        @each $key, $value in $type-style {
+	            #{$key}: $value
+	        }
+		}
     }
 
     // sizes.
