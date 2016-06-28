@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('build', 'Rebuild everything.', [
-		// 'copy:fonts',
+		'copy',
 		'grunticon',
 		'styles',
 		'scripts',
