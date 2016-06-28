@@ -54,3 +54,7 @@ npm-debug.log
 
 # ...and local development stuff.
 log/
+local.nginx.conf
+
+# oh, and the readme.
+README.md
