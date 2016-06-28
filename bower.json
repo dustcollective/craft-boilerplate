@@ -14,7 +14,12 @@
     "loadcss": "^0.2.4",
     "lazysizes": "^1.4.0",
     "picturefill": "^3.0.2",
-    "fontfaceobserver": "^1.6.5"
+    "fontfaceobserver": "^1.6.5",
+	"craft-anchor": "https://github.com/mijewe/craft-anchor.git",
+	"craft-cachey" : "https://github.com/dustcollective/craft-cachey.git",
+	"craft-emailwrap" : "https://github.com/mijewe/craft-emailwrap.git",
+	"craft-refreshstring" : "https://github.com/mijewe/craft-refreshstring.git",
+	"typogrify" : "https://github.com/jamiepittock/craft-typogrify.git"
   },
   "devDependencies": {
     "normalize-scss": "~3.0.3",

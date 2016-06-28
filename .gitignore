@@ -4,11 +4,6 @@ craft/*
 # ...except specified plugins...
 !craft/plugins/
 craft/plugins/*
-!craft/plugins/anchor/
-!craft/plugins/cachey/
-!craft/plugins/emailwrap/
-!craft/plugins/refreshstring/
-!craft/plugins/typogrify/
 
 # ...translations...
 !craft/translations/
