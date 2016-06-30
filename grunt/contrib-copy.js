@@ -54,6 +54,42 @@ module.exports = function(grunt) {
 				dest: 'craft/plugins/typogrify/',
 				flatten: false
 			}]
+		},
+		plugincontactform: {
+			files: [{
+				expand: true,
+				cwd: 'bower_components/contactform/contactform/',
+				src: ['**'],
+				dest: 'craft/plugins/contactform/',
+				flatten: false
+			}]
+		},
+		pluginredirectmanager: {
+			files: [{
+				expand: true,
+				cwd: 'bower_components/redirectmanager/redirectmanager/',
+				src: ['**'],
+				dest: 'craft/plugins/redirectmanager/',
+				flatten: false
+			}]
+		},
+		pluginsproutfields: {
+			files: [{
+				expand: true,
+				cwd: 'bower_components/sproutfields/',
+				src: ['**'],
+				dest: 'craft/plugins/sproutfields/',
+				flatten: false
+			}]
+		},
+		pluginjsontransforms: {
+			files: [{
+				expand: true,
+				cwd: 'bower_components/craft-jsontransforms/jsontransforms/',
+				src: ['**'],
+				dest: 'craft/plugins/jsontransforms/',
+				flatten: false
+			}]
 		}
 	});
 

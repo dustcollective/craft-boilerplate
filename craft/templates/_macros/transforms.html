@@ -1,32 +1,6 @@
 {% macro getTransform(image, baseTransform, size) %}{% spaceless %}
 
-	{% set transforms = {
-		'default' : {
-			'quality' : 100,
-			'position' : 'center-center',
-			'mode' : 'crop'
-		},
-		'example' : {
-			'default' : {
-				'position' : 'top-right'
-			},
-			'bear' : {
-				'width' : 1440
-			},
-			'wolf' : {
-				'width' : 1040
-			},
-			'fox' : {
-				'width' : 800
-			},
-			'rabbit' : {
-				'width' : 600
-			},
-			'mouse' : {
-				'width' : 480
-			}
-		}
-	} %}
+	{% set transforms = craft.JsonTransforms.getTransforms() %}
 
 	{% set thistransform = transforms.default|merge( transforms[baseTransform]['default'] )|merge( transforms[baseTransform][size] ) %}
 
