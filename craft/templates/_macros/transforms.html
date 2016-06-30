@@ -1,9 +1,7 @@
 {% macro getTransform(image, baseTransform, size) %}{% spaceless %}
 
-	{% set transforms = craft.JsonTransforms.getTransforms() %}
+	{% set thisTransform = craft.JsonTransforms.getTransform(baseTransform, size) %}
 
-	{% set thistransform = transforms.default|merge( transforms[baseTransform]['default'] )|merge( transforms[baseTransform][size] ) %}
-
-	{{ image.getUrl(thistransform) }}
+	{{ image.getUrl(thisTransform) }}
 
 {% endspaceless %}{% endmacro %}
